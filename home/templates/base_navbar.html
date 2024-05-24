@@ -1,0 +1,25 @@
+{% extends 'base_bootstrap.html' %}
+{% block navbar %}
+<nav
+  class="navbar navbar-expand-lg bg-primary"
+  data-bs-theme="dark"
+>
+  <a class="navbar-brand" href="{% url 'home:main' %}">Cálculo y Geometría Analítica</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarContent"
+    aria-controls="navbarContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarContent">
+    <div class="navbar-nav">
+      <a href="https://dcb.ingenieria.unam.mx/index.php/coordinaciones/matematicas/calculo-geometria-analitica/" target="_blank" class="nav-link">Página de la DCB</a>
+    </div>
+  </div>
+</nav>
+{% endblock navbar %}
