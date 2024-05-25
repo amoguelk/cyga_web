@@ -21,7 +21,7 @@ from django.shortcuts import redirect
 import home
 
 urlpatterns = [
-    path('portal/', admin.site.urls),
+    path('mithrun/', admin.site.urls),
     # Apps
     path("", lambda r: redirect("home/")),
     path("home/", include("home.urls"))
