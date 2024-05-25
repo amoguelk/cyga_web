@@ -7,8 +7,8 @@
             <div class="card">                          
                 <div class="card-body">
                     <h5 class="card-title">{{ a.title }}</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">{{ a.updated_at|naturaltime }}</h6>  
-                    {{ a.body }}
+                    <a href="" id="date" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{ a.updated_at }}" class="card-subtitle mb-2 text-body-secondary">{{ a.updated_at|naturaltime }}</a>  
+                    <p>{{ a.body }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -17,3 +17,6 @@
         {% endif %}
     </p>
 </section>
+<script>    
+    [...document.querySelectorAll('[data-bs-toggle="popover"]')].forEach(el => new bootstrap.Popover(el))
+</script>
