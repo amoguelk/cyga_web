@@ -10,3 +10,4 @@ github_settings.py
 
 # Environment
 .env.development.local
+.env.staging
