@@ -1,5 +1,11 @@
 {% extends "base_navbar.html" %}
-{% block title %}Cálculo y Geometría Analítica{% endblock title %} 
+{% block title %}CyGA | Inicio{% endblock title %} 
 {% block content %}
-{% include "home/announcements.html" %}
+<h1 class="display-5">Anuncios más recientes</h2>
+{% include "home/announcement_cards.html" %}
+{% if announcement_list %}
+<div class="d-flex justify-content-center">
+    <a href="{% url 'home:announcements' %}" class="btn btn-outline-primary" role="button">Ver todos los anuncios</a>
+</div>
+{% endif %}
 {% endblock content %}

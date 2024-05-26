@@ -10,8 +10,16 @@ class RedirectView(View):
 
 class HomeView(View):
     def get(self, request):
-        announcement_list = Announcement.objects.all()
+        announcement_list = Announcement.objects.filter(archived=False).order_by("-created_at")[:2]
         context = {
            "announcement_list": announcement_list,
         };
         return render(request, 'home/main.html', context);
+
+class AnnouncementListView(View):
+    def get(self, request):
+        announcement_list = Announcement.objects.filter(archived=False).order_by("-created_at")
+        context = {
+           "announcement_list": announcement_list,
+        };
+        return render(request, 'home/announcements.html', context);
