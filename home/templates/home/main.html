@@ -1,11 +1,26 @@
 {% extends "base_navbar.html" %}
 {% block title %}CyGA | Inicio{% endblock title %} 
 {% block content %}
+<!-- ANNOUNCEMENTS -->
 <h1 class="display-5">Anuncios más recientes</h2>
+<hr>
 {% include "home/announcement_cards.html" %}
 {% if announcement_list %}
 <div class="d-flex justify-content-center">
     <a href="{% url 'home:announcements' %}" class="btn btn-outline-primary" role="button">Ver todos los anuncios</a>
 </div>
 {% endif %}
+<!-- END ANNOUNCEMENTS -->
+
+<!-- SLIDES -->
+<h1 class="display-5">Presentaciones</h2>
+<hr>
+{% include "home/slides.html" %}
+<!-- END SLIDES -->
+
+<!-- ADDITIONAL MATERIAL -->
+<h1 class="display-5">Material adicional</h2>
+<hr>
+<!-- {% include "home/announcement_cards.html" %} -->
+<!-- END ADDITIONAL MATERIAL -->
 {% endblock content %}
