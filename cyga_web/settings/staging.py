@@ -36,3 +36,4 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 ENVIRONMENT_NAME = "Staging"
+STATIC_ROOT = os.path.join(BASE_DIR, "static")

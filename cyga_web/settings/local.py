@@ -37,3 +37,4 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 ENVIRONMENT_NAME = "Development"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
