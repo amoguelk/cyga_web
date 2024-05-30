@@ -1,15 +1,15 @@
 <div>
-    {% if slide_list %}
+    {% if material_list %}
         <div class="container">
             <div class="row row-cols-lg-4 row-cols-sm-1 row-cols-md-2 row-cols-1">
-                {% for slide in slide_list %}
+                {% for material in material_list %}
                     <div class="col p-2">
-                        <a href="{{ slide.url }}" target="_blank" class="btn btn-primary w-100">{{ slide.name }}</a>
+                        <a href="{{ material.url }}" target="_blank" class="btn btn-primary w-100">{{ material.name }}</a>
                     </div>
                 {% endfor %}
             </div>
         </div>
     {% else %}
-    <p>No se han subido presentaciones aún</p>
+    <p>No se ha compartido material aún</p>
     {% endif %}
 </div>
