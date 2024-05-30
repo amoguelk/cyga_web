@@ -1,4 +1,5 @@
 from django.contrib import admin
+from import_export import resources
 from django.utils.translation import ngettext
 from django.contrib import messages
 from .models import Announcement, Content
@@ -48,6 +49,9 @@ admin.site.register(Announcement, AnnouncementAdmin)
 ################Content################
 #######################################
 
+class ContentResource(resources.ModelResource):
+    class Meta:
+        model = Content
 
 class ContentAdmin(admin.ModelAdmin):
     list_display = ["name", "type", "archived"]

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.humanize",
     "django_bootstrap5",
+    "import_export",
     # Apps
     "home",
 ]
