@@ -2,7 +2,7 @@
 <p>
     {% if announcement_list %}
         {% for a in announcement_list %}
-        <div class="card my-4">                          
+        <div class="card my-4">
             <div class="card-body">
                 <h5 class="card-title">{{ a.title }}</h5>
                 <div class="flex-row">
@@ -11,7 +11,7 @@
                         <span class="card-subtitle mb-2 text-body-secondary">(Editado <a href="" id="date" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{ a.updated_at }}" class="card-subtitle mb-2 text-body-secondary">{{ a.updated_at|naturaltime }}</a>)</span>
                     {% endif %}
                 </div>
-                <p>{{ a.body }}</p>
+                <p>{{ a.body | linebreaks | urlize }}</p>
             </div>
         </div>
         {% endfor %}
@@ -19,6 +19,6 @@
     <p>No hay anuncios para mostrar</p>
     {% endif %}
 </p>
-<script>    
+<script>
     [...document.querySelectorAll('[data-bs-toggle="popover"]')].forEach(el => new bootstrap.Popover(el))
 </script>
