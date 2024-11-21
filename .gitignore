@@ -6,7 +6,8 @@ github_settings.py
 *.pyc
 
 # Editor settings
-.vscode
+.ropeproject
+pyrightconfig.json
 
 # Environment
 .env.development.local
